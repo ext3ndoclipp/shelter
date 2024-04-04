@@ -1,0 +1,11 @@
+{
+  "name": "shelter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lab1": "node test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
