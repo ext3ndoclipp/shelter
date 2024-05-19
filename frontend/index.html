@@ -38,6 +38,29 @@ margin-bottom: 20px;
 <button type="submit">Delete</button>
 </form>
 
+<h2>Folder</h2>
+<form id="createFolderForm">
+<input type="text" id="nameFolder" placeholder="name folder">
+<button type="submit">Create</button>
+</form>
+
+<form id="groupingFolderForm">
+<input type="text" id="folderName" placeholder="name folder">
+<input type="text" id="taskName" placeholder=" tasks name">
+<button type="submit">Grouping</button>
+</form>
+
+<form id="updateFolderForm">
+<input type="text" id="updateFolderOldName" placeholder="old name folder">
+<input type="text" id="updateFolderNewName" placeholder=" new name folder">
+<button type="submit">update</button>
+</form>
+
+<form id="delteFolderForm">
+<input type="text" id="deleteNameFolder" placeholder="name folder">
+<button type="submit">delete</button>
+</form>
+
 <h2>Sign in</h2>
 <!— Форма входа —>
 <form id="loginForm">
@@ -50,6 +73,7 @@ margin-bottom: 20px;
 <!— Форма регистрации —>
 <form id="registerForm">
 <input type="text" id="newUsername" placeholder="Новое имя пользователя" required>
+<input type="text" id="newEmail" placeholder="Почта пользователя" required>
 <input type="password" id="newPassword" placeholder="Новый пароль" required>
 <button type="submit">Зарегистрироваться</button>
 </form>
