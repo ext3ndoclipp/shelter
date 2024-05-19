@@ -10,11 +10,12 @@ const config = {
       password: 'AVNS_uqN9nza1dP6NpHIUSk6', // замените это на пароль от своего пользователя
       port: 25060, // порт базы данных
 			ssl: {
-			  ca: fs.readFileSync('C:\\Users\\nikit\\OneDrive\\Рабочий стол\\Новая папка\\shelter\\config\\ca-certificate-test.crt'), // Путь к файлу ca.crt
+			  ca: fs.readFileSync('C:\\Users\\nikit\\OneDrive\\Рабочий стол\\Новая папка\\shelter\\backend\\config\\ca-certificate-test.crt'), // Путь к файлу ca.crt
 			}
     },
   }, 
   port: 3000 // порт на котором будет запущен сервер приложения
+ 
 };
 
 module.exports =  config;
