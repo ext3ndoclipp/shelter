@@ -7,7 +7,7 @@ const cors = require('cors');
 
 const app = express();
 //const port = config.port;
-const port = process.env.PORT || 3000;
+const port = config.port;
 
 const path = require('path');
 app.use(express.static(path.join(__dirname, '../frontend')))
@@ -300,6 +300,6 @@ const sqlQuery = `UPDATE tasks SET foldername = '${folderName}' WHERE name = '${
   });
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+app.listen(10000, () => {
+  console.log('Server is running on port 10000');
 });
