@@ -2,7 +2,7 @@
 
 // Пример запроса задач текущего пользователя на клиенте
 function loadTasks() {
-  fetch('http://localhost:3000/getTasks')
+  fetch('https://shelter-6.onrender.com/getTasks')
     .then(response => response.json())
     .then(tasks => {
       const taskList = document.getElementById('taskList');
@@ -17,7 +17,7 @@ function loadTasks() {
 }
 
 function loadFolder() {
-  fetch('http://localhost:3000/getFolder')
+  fetch('https://shelter-6.onrender.com/getFolder')
     .then(response => response.json())
     .then(tasks => {
       const taskList = document.getElementById('folderList');
@@ -33,7 +33,7 @@ function loadFolder() {
 loadFolder();
 // Функция для добавления задачи на сервер
 function addTask(taskName) {
-  fetch('http://localhost:3000/addTask', {
+  fetch('https://shelter-6.onrender.com/addTask', {
     method: 'POST', 
     headers: {
       'Content-Type': 'application/json'
@@ -62,7 +62,7 @@ document.getElementById('taskForm').addEventListener('submit', function (event) 
 
 // Функция для удаления задачи с сервера
 function deleteTask(id) {
-  fetch(`http://localhost:3000/deleteTask/:${id}`, {
+  fetch(`https://shelter-6.onrender.com/deleteTask/:${id}`, {
     method: 'DELETE', headers: {
       'Content-Type': 'application/json'
     }, body: JSON.stringify({name: id})
@@ -89,7 +89,7 @@ document.getElementById('deleteForm').addEventListener('submit', function (event
 
 // Функция для обновления задачи
 function updateTask(oldName, newName) {
-  fetch(`http://localhost:3000/updateTask`, {
+  fetch(`https://shelter-6.onrender.com/updateTask`, {
     method: 'PUT', headers: {
       'Content-Type': 'application/json'
     }, body: JSON.stringify({ oldname: oldName, newname: newName })
@@ -119,7 +119,7 @@ document.getElementById('updateForm').addEventListener('submit', function (event
 
 // Функция для добавления папки на сервер
 function createFolder(foldername) {
-  fetch(`http://localhost:3000/createFolder/:${foldername}`, {
+  fetch(`https://shelter-6.onrender.com/createFolder/:${foldername}`, {
     method: 'POST', headers: {
       'Content-Type': 'application/json'
     }, body: JSON.stringify({name: foldername})
@@ -147,7 +147,7 @@ document.getElementById('createFolderForm').addEventListener('submit', function 
 
 // Функция для удаления папки с сервера
 function deleteFolder(foldername) {
-  fetch(`http://localhost:3000/deleteFolder/:${foldername}`, {
+  fetch(`https://shelter-6.onrender.com/deleteFolder/:${foldername}`, {
     method: 'DELETE', headers: {
       'Content-Type': 'application/json'
     }, body: JSON.stringify({name: foldername})
@@ -174,7 +174,7 @@ document.getElementById('deleteFolderForm').addEventListener('submit', function 
 
 // Функция для обновления папки
 function updateFolder(updateFolderOldName, updateFolderNewName) {
-  fetch(`http://localhost:3000/updateFolder`, {
+  fetch(`https://shelter-6.onrender.com/updateFolder`, {
     method: 'PUT', headers: {
       'Content-Type': 'application/json'
     }, body: JSON.stringify({ oldfoldername: updateFolderOldName, newfoldername:  updateFolderNewName })
@@ -204,7 +204,7 @@ document.getElementById('updateFolderForm').addEventListener('submit', function 
 
 // Функция для группировки задач по папкам
 function groupingFolder(folderName, taskName) {
-  fetch(`http://localhost:3000/groupingFolder`, {
+  fetch(`https://shelter-6.onrender.com/groupingFolder`, {
     method: 'PUT', headers: {
       'Content-Type': 'application/json'
     }, body: JSON.stringify({ foldername: folderName, taskname: taskName })
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     try {
-      const response = await fetch('http://localhost:3000/login', {
+      const response = await fetch('https://shelter-6.onrender.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const newEmail = document.getElementById('newEmail').value;
     const newPassword = document.getElementById('newPassword').value;
     try {
-      const response = await fetch('http://localhost:3000/register', {
+      const response = await fetch('https://shelter-6.onrender.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

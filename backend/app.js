@@ -9,9 +9,12 @@ const app = express();
 //const port = config.port;
 const port = process.env.PORT || 3000;
 
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../frontend')))
 app.use(express.json());
 
 app.use(cors());
+app.get('/healthcheck', (req, res) => res.sendStatus(200));
 
 // Конфигурация подключения к базе данных
 const dbConnection = mysql.createConnection(config.db.mysql);
