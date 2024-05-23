@@ -1,83 +1,89 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>To-Do List</title>
-<style>
-/* Стили для простоты, можно изменить по вашему желанию */
-body {
-font-family: Arial, sans-serif;
-}
-#taskList {
-margin-bottom: 20px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        /* Стили для простоты, можно изменить по вашему желанию */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #taskList {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body bgcolor = "black" text = "white">
 
 <h1>To-Do List</h1>
 <form id="taskForm">
-<input type="text" id="taskInput" placeholder="Add a new task">
-<button type="submit">Add Task</button>
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button type="submit">Add Task</button>
 </form>
 <ul id="taskList">
-<!— Сюда будут добавляться задачи —>
+    <!-- Сюда будут добавляться задачи -->
+</ul>
+
+<h2>Папки:</h2>
+<ul id="folderList">
+    <!-- Сюда будут добавляться папки -->
 </ul>
 
 <h2>Update</h2>
 <form id="updateForm">
-<input type="text" id="oldName" placeholder="old name">
-<input type="text" id="newName" placeholder="new name">
-<button type="submit">Update</button>
+  <input type="text" id="oldName" placeholder="old name">
+  <input type="text" id="newName" placeholder="new name">
+  <button type="submit">Update</button>
 </form>
 
 <h2>Delete</h2>
 <form id="deleteForm">
-<input type="text" id="name" placeholder="task for delete">
-<button type="submit">Delete</button>
+  <input type="text" id="name" placeholder="task for delete">
+  <button type="submit">Delete</button>
 </form>
 
 <h2>Folder</h2>
 <form id="createFolderForm">
-<input type="text" id="nameFolder" placeholder="name folder">
-<button type="submit">Create</button>
+  <input type="text" id="nameFolder" placeholder="name folder">
+  <button type="submit">Create</button>
 </form>
 
 <form id="groupingFolderForm">
-<input type="text" id="folderName" placeholder="name folder">
-<input type="text" id="taskName" placeholder=" tasks name">
-<button type="submit">Grouping</button>
+  <input type="text" id="folderName" placeholder="name folder">
+  <input type="text" id="taskName" placeholder=" tasks name">
+  <button type="submit">Grouping</button>
 </form>
 
 <form id="updateFolderForm">
-<input type="text" id="updateFolderOldName" placeholder="old name folder">
-<input type="text" id="updateFolderNewName" placeholder=" new name folder">
-<button type="submit">update</button>
+  <input type="text" id="updateFolderOldName" placeholder="old name folder">
+  <input type="text" id="updateFolderNewName" placeholder=" new name folder">
+  <button type="submit">update</button>
 </form>
 
-<form id="delteFolderForm">
-<input type="text" id="deleteNameFolder" placeholder="name folder">
-<button type="submit">delete</button>
+<form id="deleteFolderForm">
+  <input type="text" id="deleteNameFolder" placeholder="name folder">
+  <button type="submit">delete</button>
 </form>
 
 <h2>Sign in</h2>
-<!— Форма входа —>
+<!-- Форма входа -->
 <form id="loginForm">
-<input type="text" id="username" placeholder="Имя пользователя" required>
-<input type="password" id="password" placeholder="Пароль" required>
-<button type="submit">Войти</button>
+  <input type="text" id="username" placeholder="Имя пользователя" required>
+  <input type="password" id="password" placeholder="Пароль" required>
+  <button type="submit">Войти</button>
 </form>
 
 <h2>Sign up</h2>
-<!— Форма регистрации —>
+<!-- Форма регистрации -->
 <form id="registerForm">
-<input type="text" id="newUsername" placeholder="Новое имя пользователя" required>
-<input type="text" id="newEmail" placeholder="Почта пользователя" required>
-<input type="password" id="newPassword" placeholder="Новый пароль" required>
-<button type="submit">Зарегистрироваться</button>
+  <input type="text" id="newUsername" placeholder="Новое имя пользователя" required>
+  <input type="text" id="newEmail" placeholder="Почта пользователя" required>
+  <input type="password" id="newPassword" placeholder="Новый пароль" required>
+  <button type="submit">Зарегистрироваться</button>
 </form>
 
-<script src="script.js"></script> <!— Подключаем JavaScript файл —>
+<script src="script.js"></script> <!-- Подключаем JavaScript файл -->
 </body>
 </html>
+
